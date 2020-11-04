@@ -25,3 +25,19 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.nyanCat{
+  border:10px solid blue;
+  border-radius:0;
+}
+
+.tacoNyan{
+  border:40px solid greenyellow;
+  border-radius:0;
+  transition: border-color 2s ease 0s;
+}
+
+.tacoNyan.gradient{
+  border-color:pink;
+  transition: border-color 2s ease 0s;
+  /* transform: rotate(180deg); */
+}
