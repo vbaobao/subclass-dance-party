@@ -33,5 +33,13 @@ $(document).ready(function() {
 
   });
 
+  // Event listener for line up button
+  //loop through created dancers (on click) and tell each object to lineUp()
+  // lineUp(top,left) that we assign
+  // The for loop will call lineup through the dancer array
+  //Each iteration of the loop will increment the top parameter
+  //toggle the class to align on each already created dancer/class
+  //move position of all dancers to side
+
 });
 
