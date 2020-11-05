@@ -33,11 +33,16 @@ body, a:link, a:visited, a:active{
 .tacoNyan{
   border:40px solid greenyellow;
   border-radius:0;
-  transition: border-color 2s ease 0s;
+  transition: border-color 1s ease 0s;
+  /* transform: rotate(45deg); */
 }
 
 .tacoNyan.gradient{
   border-color:pink;
-  transition: border-color 2s ease 0s;
-  /* transform: rotate(180deg); */
+  transition: border-color 1s ease 0s;
+  transform: rotate(45deg);
 }
+
+/* .orderOne {
+  transform: scale(1, 1.5) rotate(90deg);
+} */

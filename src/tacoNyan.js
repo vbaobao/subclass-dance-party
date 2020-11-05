@@ -13,8 +13,8 @@ makeTacoNyan.prototype.constructor = makeTacoNyan;
 
 makeTacoNyan.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  makeDancer.prototype.step.call(this);
+  // makeDancer.prototype.step.call(this);
   this.$node.toggleClass('gradient');
   // Spin + changes size
-  setInterval(this.step.bind(this), this.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
