@@ -67,5 +67,12 @@ $(document).ready(function () {
       }
     }
   });
-});
 
+  for (const dancer of window.dancers) {
+    let $selector = $('.dancer');
+    $(dancer.$node).on('mouseover', $selector, function () {
+      alert('hello');
+      dancer.$node.css('color', 'white');
+    });
+  }
+});
