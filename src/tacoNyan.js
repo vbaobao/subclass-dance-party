@@ -20,10 +20,12 @@ makeTacoNyan.prototype.step = function() {
 };
 
 makeTacoNyan.prototype.lineUp = function(y) {
-
-  var lineUpStyle = {
-    left: y
-  };
-  this.$node.css(lineUpStyle);
-  this.$node.addClass('lineUpDancer');
+  this.$node.css('top', '85%');
+  this.$node.css('left', y);
+  // this.$node.css('top', x);
+  // if (isLeft) {
+  //   this.$node.css('left', '15%');
+  // } else {
+  //   this.$node.css('left', '85%');
+  //}
 };

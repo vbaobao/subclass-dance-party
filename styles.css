@@ -55,15 +55,3 @@ body, a:link, a:visited, a:active{
   transition: border-color 1s ease 0s;
   transform: rotate(45deg);
 }
-
-.lineUpDancer.blinkyDancer {
-  left:25%
-}
-
-.lineUpDancer.nyanCat {
-  left:50px
-}
-
-.lineUpDancer.tacoNyan {
-  top:0
-}

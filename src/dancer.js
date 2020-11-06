@@ -31,11 +31,8 @@ makeDancer.prototype.setPosition = function (top, left) {
 };
 
 makeDancer.prototype.lineUp = function (x) {
+  this.$node.css('left', '15%');
+  this.$node.css('top', x);
 
-  var lineUpStyle = {
-    top: x
-  };
-  this.$node.css(lineUpStyle);
-  this.$node.addClass('lineUpDancer');
 };
 //work on init file for "line up" on-click

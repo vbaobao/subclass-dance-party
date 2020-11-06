@@ -15,11 +15,6 @@ makeNyanCat.prototype.step = function() {
 };
 
 makeNyanCat.prototype.lineUp = function(x) {
-
-  var lineUpStyle = {
-    top: x
-  };
-
-  this.$node.css(lineUpStyle);
-  this.$node.addClass('lineUpDancer');
+  this.$node.css('left', '85%');
+  this.$node.css('top', x);
 };

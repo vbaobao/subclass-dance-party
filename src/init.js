@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
 
-  $('.danceButton').on('click', function(event) {
+  $('.danceButton').on('click', function (event) {
     // Event listener for line up button
     //loop through created dancers (on click) and tell each object to lineUp()
     // lineUp(top,left) that we assign
@@ -42,11 +42,14 @@ $(document).ready(function() {
     //Each iteration of the loop will increment the top parameter
     //toggle the class to align on each already created dancer/class
     //move position of all dancers to side
-    var $position = $this.position();
-    let start = 50;
-    for (const dancer of window.dancers) {
+    let start = 100;
+    // let isLeft = true;
+    for (const [index, dancer] of window.dancers.entries()) {
       dancer.lineUp(start);
       start += 25;
+      // if (window.dancers[index] === makeTacoNyan) {
+      //   isLeft = !isLeft;
+      // }
     }
   });
 });
