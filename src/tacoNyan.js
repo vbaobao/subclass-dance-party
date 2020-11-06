@@ -18,3 +18,12 @@ makeTacoNyan.prototype.step = function() {
   // Spin + changes size
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
+
+makeTacoNyan.prototype.lineUp = function(y) {
+
+  var lineUpStyle = {
+    left: y
+  };
+  this.$node.css(lineUpStyle);
+  this.$node.addClass('lineUpDancer');
+};

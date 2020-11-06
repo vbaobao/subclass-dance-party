@@ -13,3 +13,13 @@ makeNyanCat.prototype.step = function() {
   // Spins
   this.$node.fadeToggle();
 };
+
+makeNyanCat.prototype.lineUp = function(x) {
+
+  var lineUpStyle = {
+    top: x
+  };
+
+  this.$node.css(lineUpStyle);
+  this.$node.addClass('lineUpDancer');
+};
