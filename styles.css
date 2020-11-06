@@ -6,6 +6,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url("src/background.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
 }
 
 body, a:link, a:visited, a:active{
