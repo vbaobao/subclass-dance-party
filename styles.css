@@ -20,7 +20,7 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 
-.danceButton{
+.danceButton, .pairButton{
   padding:5px 12px;
   float:right;
   background-color: black;
@@ -57,4 +57,8 @@ body, a:link, a:visited, a:active{
   border-color:pink;
   transition: border-color 1s ease 0s;
   transform: rotate(45deg);
+}
+
+.makeBig {
+  border-width:60px;
 }

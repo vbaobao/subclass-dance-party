@@ -35,13 +35,6 @@ $(document).ready(function () {
 
 
   $('.danceButton').on('click', function (event) {
-    // Event listener for line up button
-    //loop through created dancers (on click) and tell each object to lineUp()
-    // lineUp(top,left) that we assign
-    // The for loop will call lineup through the dancer array
-    //Each iteration of the loop will increment the top parameter
-    //toggle the class to align on each already created dancer/class
-    //move position of all dancers to side
     let start = 100;
     // let isLeft = true;
     for (const [index, dancer] of window.dancers.entries()) {
@@ -50,6 +43,28 @@ $(document).ready(function () {
       // if (window.dancers[index] === makeTacoNyan) {
       //   isLeft = !isLeft;
       // }
+    }
+  });
+
+  $('.pairButton').on('click', function (event) {
+    let notPaired = [...window.dancers];
+    for (const dancer of window.dancers) {
+      let position1 = dancer.$node.position();
+      let x1 = position1.left;
+      let y1 = position1.top;
+      //another dancer, to find their coordinations
+      for (const pair of window.dancers) {
+        let position2 = pair.$node.position();
+        let x2 = position2.left;
+        let y2 = position2.top;
+        distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        console.log('distance:', distance);
+
+        if (distance <= 200 && distance !== 0) {
+          dancer.$node.addClass('makeBig');
+          pair.$node.addClass('makeBig');
+        }
+      }
     }
   });
 });
