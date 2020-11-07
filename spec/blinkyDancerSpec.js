@@ -30,5 +30,6 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+
   });
 });

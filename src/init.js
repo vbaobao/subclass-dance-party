@@ -42,8 +42,10 @@ $(document).ready(function () {
     }
   });
 
+
   $('.pairButton').on('click', function (event) {
     let notPaired = [...window.dancers];
+
     for (const dancer of window.dancers) {
       let position1 = dancer.$node.position();
       let x1 = position1.left;
@@ -53,7 +55,7 @@ $(document).ready(function () {
         let position2 = pair.$node.position();
         let x2 = position2.left;
         let y2 = position2.top;
-        distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        let distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
         if (distance <= 300 && distance !== 0) {
           dancer.$node.addClass('makeBig');
