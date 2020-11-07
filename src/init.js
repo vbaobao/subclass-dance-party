@@ -60,7 +60,8 @@ $(document).ready(function () {
         distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         console.log('distance:', distance);
 
-        if (distance <= 200 && distance !== 0) {
+        if (distance <= 250 && distance !== 0) {
+          console.log('distance:', distance);
           dancer.$node.addClass('makeBig');
           pair.$node.addClass('makeBig');
         }
@@ -68,11 +69,13 @@ $(document).ready(function () {
     }
   });
 
-  for (const dancer of window.dancers) {
-    let $selector = $('.dancer');
-    $(dancer.$node).on('mouseover', $selector, function () {
-      alert('hello');
-      dancer.$node.css('color', 'white');
+  $('body').on('mouseover', '.dancer', function () {
+    let newTop = $('body').height() * Math.random();
+    let newLeft = $('body').width() * Math.random();
+    $(this).css({
+      top: newTop,
+      left: newLeft
     });
-  }
+  });
+
 });
