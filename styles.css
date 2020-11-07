@@ -1,12 +1,13 @@
 body, html{
   height:100%;
+  font-family: 'Bebas Neue', cursive;
 }
 
 body{
   margin: 0px;
-  background-color:#444;
-  font-size: 18px;
-  background: url("src/background.jpg") no-repeat center;
+  background-color:rgb(85, 224, 171);
+  font-size: 22px;
+  background: url("assets/background.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
 }
@@ -15,50 +16,52 @@ body, a:link, a:visited, a:active{
   color: lightblue;
 }
 
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+button{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 22px;
 }
 
-.danceButton, .pairButton{
-  padding:5px 12px;
+.title{
+  padding:10px 12px;
   float:right;
+  height:31px;
+  background-color: #777;
+}
+
+.danceButton, .pairButton, .addDancerButton{
+  padding:10px 12px;
+  float:right;
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive;
   background-color: black;
   color: white;
 }
 
-.topbar{
-  height:32px;
-  background-color: #555;
+.addDancerButton{
+  background-color: white;
+  color: black;
 }
 
-.title{
-  background-color: #777;
+.topbar{
+  height:52px;
+  background-color: #555;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
 }
-.nyanCat{
-  border:10px solid blue;
-  border-radius:0;
-}
 
-.tacoNyan{
-  border:40px solid greenyellow;
-  border-radius:0;
-  transition: border-color 1s ease 0s;
-  /* transform: rotate(45deg); */
+img {
+  width:25%;
+  height: auto;
 }
 
 .tacoNyan.gradient{
-  border-color:pink;
-  transition: border-color 1s ease 0s;
   transform: rotate(45deg);
 }
 
-.makeBig {
-  border-width:60px;
+.makeBig > img {
+  width:50%;
+  height:auto;
 }

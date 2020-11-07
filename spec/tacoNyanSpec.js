@@ -12,10 +12,16 @@ describe('tacoNyanDancer', function() {
     expect(tacoNyanDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(tacoNyanDancer.$node, 'toggle');
+  it('should have a step function that toggle gradient class', function() {
+    sinon.spy(tacoNyanDancer.$node, 'toggleClass');
     tacoNyanDancer.step();
-    expect(tacoNyanDancer.$node.toggle.called).to.be.true;
+    expect(tacoNyanDancer.$node.toggleClass.called).to.be.true;
+  });
+
+  it('should run the lineUp function', function() {
+    sinon.spy(tacoNyanDancer, 'lineUp');
+    tacoNyanDancer.lineUp();
+    expect(tacoNyanDancer.lineUp.called).to.be.true;
   });
 
   describe('dance', function() {

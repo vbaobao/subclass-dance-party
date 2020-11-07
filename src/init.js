@@ -36,13 +36,9 @@ $(document).ready(function () {
 
   $('.danceButton').on('click', function (event) {
     let start = 100;
-    // let isLeft = true;
     for (const [index, dancer] of window.dancers.entries()) {
       dancer.lineUp(start);
-      start += 25;
-      // if (window.dancers[index] === makeTacoNyan) {
-      //   isLeft = !isLeft;
-      // }
+      start += 50;
     }
   });
 
@@ -58,10 +54,8 @@ $(document).ready(function () {
         let x2 = position2.left;
         let y2 = position2.top;
         distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        console.log('distance:', distance);
 
-        if (distance <= 250 && distance !== 0) {
-          console.log('distance:', distance);
+        if (distance <= 300 && distance !== 0) {
           dancer.$node.addClass('makeBig');
           pair.$node.addClass('makeBig');
         }
@@ -72,6 +66,13 @@ $(document).ready(function () {
   $('body').on('mouseover', '.dancer', function () {
     let newTop = $('body').height() * Math.random();
     let newLeft = $('body').width() * Math.random();
+
+    if ($(this).hasClass('dog')) {
+      $(this).html('<img src="assets/nuclear_dog.png"></img>');
+    } else if ($(this).hasClass('cat')) {
+      $(this).html('<img src="assets/nuclear_cat.png"></img>');
+    }
+
     $(this).css({
       top: newTop,
       left: newLeft

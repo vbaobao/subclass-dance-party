@@ -3,6 +3,8 @@ var makeDancer = function (top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+  this.$node.html('<img src="assets/happy_dog.png"></img>');
+
 
   this.step();
 
@@ -35,4 +37,3 @@ makeDancer.prototype.lineUp = function (x) {
   this.$node.css('top', x);
 
 };
-//work on init file for "line up" on-click

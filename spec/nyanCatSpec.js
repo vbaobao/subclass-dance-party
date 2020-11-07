@@ -12,10 +12,16 @@ describe('nyanCatDancer', function() {
     expect(nyanCatDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(nyanCatDancer.$node, 'toggle');
+  it('should have a step function that makes its node fadeToggle', function() {
+    sinon.spy(nyanCatDancer.$node, 'fadeToggle');
     nyanCatDancer.step();
-    expect(nyanCatDancer.$node.toggle.called).to.be.true;
+    expect(nyanCatDancer.$node.fadeToggle.called).to.be.true;
+  });
+
+  it('should run the lineUp function', function() {
+    sinon.spy(nyanCatDancer, 'lineUp');
+    nyanCatDancer.lineUp();
+    expect(nyanCatDancer.lineUp.called).to.be.true;
   });
 
   describe('dance', function() {

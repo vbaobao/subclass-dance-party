@@ -1,16 +1,14 @@
 var makeNyanCat = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('nyanCat');
-  // this.$node.html(<img>)
+  this.$node.addClass('nyanCat cat');
+  this.$node.html('<img src="assets/happy_cat.png"></img>');
 };
 
 makeNyanCat.prototype = Object.create(makeDancer.prototype);
 makeNyanCat.prototype.constructor = makeNyanCat;
 
 makeNyanCat.prototype.step = function() {
-  // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
-  // Spins
   this.$node.fadeToggle();
 };
 
